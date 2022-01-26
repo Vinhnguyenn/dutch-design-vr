@@ -13,6 +13,18 @@
       <a-assets>
         <a-asset-item id="lamp-obj" src="/assets/lamp.obj"></a-asset-item>
         <a-asset-item id="lamp-mtl" src="/assets/lamp.mtl"></a-asset-item>
+        <img
+          id="img-denim"
+          src="/assets/denim.jpg"
+        ></img>
+        <img
+          id="img-carpet"
+          src="/assets/carpet.jpg"
+        ></img>
+        <img
+          id="img-marble"
+          src="/assets/marble.jpg"
+        ></img>
         <a-asset-item
           id="pedestal-obj"
           src="/assets/pedestal.obj"
@@ -34,20 +46,104 @@
         >
         </a-entity>
       </a-camera>
-      <a-entity position="0 -2 -3">
+      <a-plane
+      position="0 -2 0" rotation="-90 0 0" width="10" height="200"
+      material="src: #img-carpet; repeat: 10 200; roughness: 0.5; metalness: 0.2"
+      ></a-plane>
+      <a-entity position="-4 -2 0" rotation="0 90 0">
         <a-entity
           position="0 0 0"
           rotation="0 -90 0"
           scale="0.5 0.5 0.5"
           obj-model="obj: #pedestal-obj"
-          material="color: salmon"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
         ></a-entity>
         <a-entity
           position="0 1.7 0"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
           scale="0.5 0.5 0.5"
           obj-model="obj: #lamp-obj"
-          material="color: teal"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 -2 0" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="-4 -2 -6" rotation="0 90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 -360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 -2 -6" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 -360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="-4 -2 -12" rotation="0 90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 -2 -12" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
         ></a-entity>
       </a-entity>
     </a-scene>
