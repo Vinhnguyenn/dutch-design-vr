@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.0/dist/aframe-environment-component.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <title>Dutch Design VR</title>
+  </head>
+  <body>
+    <a-scene background="color: #333333" 
+    environment="preset: goldmine; dressingColor: #d10000;"
+    >  
+        <a-asset-item id="lamp-obj" src="/assets/lamp.obj"></a-asset-item>
+        <a-asset-item id="lamp-mtl" src="/assets/lamp.mtl"></a-asset-item>
+        <img
+          id="img-denim"
+          src="/assets/denim.jpg"
+        ></img>
+        <img
+          id="img-carpet"
+          src="/assets/carpet.jpg"
+        ></img>
+        <a-asset-item
+          id="pedestal-obj"
+          src="/assets/pedestal.obj"
+        ></a-asset-item>
+        <a-asset-item
+          id="pedestal-mtl"
+          src="/assets/pedestal.mtl"
+        ></a-asset-item>
+      </a-assets>
+      <a-camera position="0 2 0" wasd-controls="acceleration: 40">
+        <a-entity
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
+          material="color: #ffffff; shader: flat"
+        >
+        </a-entity>
+      </a-camera>
+
+      <!-- Lights -->
+      <a-entity light="type: ambient; color: #444" position="" rotation="" scale="" visible=""></a-entity>
+      <a-entity light="type: directional; color: #EEE" position="0 1 -1" rotation="" scale="" visible=""></a-entity>
+      <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="1 1 1" rotation="" scale="" visible=""></a-entity>
+
+      <!-- Carpet -->
+      <a-plane
+        position="0 0.1 0" rotation="-90 0 0" width="10" height="200"
+        material="src: #img-carpet; color: #700f0f; repeat: 10 200; roughness: 0.5; metalness: 0"
+      ></a-plane>
+
+      <!-- Pedestals -->
+      <a-entity position="-4 0.1 0" rotation="0 90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 0.1 0" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="-4 0.1 -6" rotation="0 90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 -360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 0.1 -6" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 -360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="-4 0.1 -12" rotation="0 90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+      <a-entity position="4 0.1 -12" rotation="0 -90 0">
+        <a-entity
+          position="0 0 0"
+          rotation="0 -90 0"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #pedestal-obj"
+          material="color: #E1E6E1; roughness: 1; metalness: 0.2"
+        ></a-entity>
+        <a-text
+          value="De Dutch Design Lamp is een stijlvolle lamp die opvalt door zijn strakke design en originele vorm.
+          Hij is gemaakt van duurzaam, FSC gecertificeerd karton en door het smalle en hippe ontwerp is hij flexibel,
+          op talloze plaatsen te gebruiken."
+          text="anchor: center; width: 0.5; color: #000; wrapCount: 20"
+          position="0 0.8 0.6"
+        ></a-text>
+        <a-entity
+          position="0 1.7 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
+          scale="0.5 0.5 0.5"
+          obj-model="obj: #lamp-obj"
+          material="src: #img-denim; repeat: 25 25"
+        ></a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
+
