@@ -13,6 +13,8 @@
       <a-assets>
         <a-asset-item id="lamp-obj" src="/assets/lamp.obj"></a-asset-item>
         <a-asset-item id="lamp-mtl" src="/assets/lamp.mtl"></a-asset-item>
+        <a-asset-item id="lamp2-obj" src="/assets/lamp2.obj"></a-asset-item>
+        <a-asset-item id="lamp2-mtl" src="/assets/lamp2.mtl"></a-asset-item>
         <img
           id="img-denim"
           src="/assets/denim.jpg"
@@ -74,8 +76,7 @@
           position="0 1.7 0"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
           scale="0.5 0.5 0.5"
-          obj-model="obj: #lamp-obj"
-          material="src: #img-denim; repeat: 25 25"
+          obj-model="obj: #lamp-obj; mtl: #lamp-mtl"
         ></a-entity>
       </a-entity>
       <a-entity position="4 0.1 0" rotation="0 -90 0">
@@ -97,8 +98,7 @@
           position="0 1.7 0"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; easing: linear"
           scale="0.5 0.5 0.5"
-          obj-model="obj: #lamp-obj"
-          material="src: #img-denim; repeat: 25 25"
+          obj-model="obj: #lamp2-obj; mtl: #lamp2-mtl"
         ></a-entity>
       </a-entity>
       <a-entity position="-4 0.1 -6" rotation="0 90 0">
