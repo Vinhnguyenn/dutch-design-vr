@@ -1,6 +1,6 @@
 # Blender v2.93.6 OBJ File: 'lamp2.blend'
 # www.blender.org
-mtllib lamp2.mtl
+mtllib lamp2fixed.mtl
 o Cube
 v 0.500000 3.000000 -0.675778
 v 0.500000 1.200000 -1.000000
