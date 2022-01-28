@@ -37,16 +37,12 @@
         </a-assets>
         <a-camera position="0 2 2">
             <a-cursor color="white"></a-cursor>
-        </a-camera>§a
+        </a-camera>
         
         <a-circle radius="50" position="0 0 -4" rotation="-90 0 0" src="#wood" repeat="20 20" color="#6e6760"></a-circle>
 
-
         <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 -90 0" src="#pedestal-obj" color="darkgrey"></a-obj-model>
-        <a-cylinder button position="0 1.5 0" radius="0.1" height="0.2" color="red"
-        animation__mousedown="property: model-opacity.opacity; from: 1; to: 0.01; startEvents: mousedown; dur: 700";
-        ></a-cylinder>
-        <!-- <a-cylinder height="10" radius="50" open-ended="true" material="side: double" src="#leather" repeat="80 80" color="#4d2804"></a-cylinder> -->
+        <a-cylinder button position="0 1.5 0" radius="0.1" height="0.2" color="red" animation__mousedown="property: model-opacity.opacity; from: 1; to: 0; startEvents: mousedown; dur: 700"></a-cylinder>
         
         <!-- Front -->
         <a-entity position="0 0 -25" class="hiddenObj" visible="false">
@@ -84,7 +80,7 @@
         </a-entity>
         <a-entity position="-16.5 0 -16.5" class="hiddenObj" visible="false">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 -45 0" src="#pedestal-obj" color="white"></a-obj-model>
-            <a-obj-model position="0 1.6 0" src="#table-chair-obj" color="grey" scale="0.3 0.3 0.3" rotation="0 -45 0" animation="property: rotation; to: 0 315 0; dur: 15000; easing: linear; loop: true"></a-obj-model>   
+            <a-obj-model position="0 1.6 0" src="#table-chair-obj" mtl="#table-chair-mtl" scale="0.3 0.3 0.3" rotation="0 -45 0" animation="property: rotation; to: 0 315 0; dur: 15000; easing: linear; loop: true"></a-obj-model>   
         </a-entity>
     </a-scene>
   </body>
