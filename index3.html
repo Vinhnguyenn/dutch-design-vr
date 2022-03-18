@@ -35,7 +35,7 @@
             <a-asset-item id="table-chair-obj" src="/assets/table-chair.obj"></a-asset-item>
             <a-asset-item id="table-chair-mtl" src="/assets/table-chair.mtl"></a-asset-item>
         </a-assets>
-        <a-camera position="0 2 2">
+        <a-camera foo wasd-controls="acceleration: 40" position="0 2 2">
             <a-cursor color="white"></a-cursor>
         </a-camera>
         
@@ -45,40 +45,40 @@
         <a-cylinder button position="0 1.5 0" radius="0.1" height="0.2" color="red" animation__mousedown="property: model-opacity.opacity; from: 1; to: 0; startEvents: mousedown; dur: 700"></a-cylinder>
         
         <!-- Front -->
-        <a-entity position="0 0 -25" class="hiddenObj" visible="false">
+        <a-entity position="0 0 -25" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 -90 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#stoel-obj" mtl="#stoel-mtl" scale="0.3 0.3 0.3" rotation="0 -90 0" animation="property: rotation; to: 0 270 0; dur: 15000; easing: linear; loop: true"></a-obj-model>
         </a-entity>
         <a-entity>
-        <a-entity position="16.5 0 -16.5" class="hiddenObj" visible="false">
+        <a-entity position="16.5 0 -16.5" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 -135 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#lamp-obj" mtl="#lamp-mtl" scale="0.3 0.3 0.3" rotation="0 -135 0" animation="property: rotation; to: 0 225 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
         </a-entity>
         <!-- Right -->
-        <a-entity position="25 0 0" class="hiddenObj" visible="false">
+        <a-entity position="25 0 0" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 180 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#kruiwagen-obj" mtl="#kruiwagen-mtl" scale="0.3 0.3 0.3" rotation="0 -180 0" animation="property: rotation; to: 0 180 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
-        <a-entity position="16.5 0 16.5" class="hiddenObj" visible="false">
+        <a-entity position="16.5 0 16.5" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 135 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#lamp2-obj" mtl="#lamp2-mtl" scale="0.3 0.3 0.3" rotation="0 135 0" animation="property: rotation; to: 0 -225 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
         <!-- Back -->
-        <a-entity position="0 0 25" class="hiddenObj" visible="false">
+        <a-entity position="0 0 25" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 90 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#redchair-obj" mtl="#redchair-mtl" scale="0.3 0.3 0.3" rotation="0 90 0" animation="property: rotation; to: 0 450 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
-        <a-entity position="-16.5 0 16.5" class="hiddenObj" visible="false">
+        <a-entity position="-16.5 0 16.5" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 45 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#stackedlamp-obj" mtl="#stackedlamp-mtl" scale="0.3 0.3 0.3" rotation="0 90 0" animation="property: rotation; to: 0 450 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
         <!-- Left -->
-        <a-entity position="-25 0 0" class="hiddenObj" visible="false">
+        <a-entity position="-25 0 0" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0" src="#pedestal-obj" color="grey"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#table-obj" mtl="#table-mtl" scale="0.3 0.3 0.3" rotation="0 0 0" animation="property: rotation; to: 0 360 0; dur: 15000; easing: linear; loop: true"></a-obj-model>    
         </a-entity>
-        <a-entity position="-16.5 0 -16.5" class="hiddenObj" visible="false">
+        <a-entity position="-16.5 0 -16.5" class="hiddenObj" visible="true">
             <a-obj-model position="0 0 0" scale="0.5 0.5 0.5" rotation="0 -45 0" src="#pedestal-obj" color="white"></a-obj-model>
             <a-obj-model position="0 1.6 0" src="#table-chair-obj" mtl="#table-chair-mtl" scale="0.3 0.3 0.3" rotation="0 -45 0" animation="property: rotation; to: 0 315 0; dur: 15000; easing: linear; loop: true"></a-obj-model>   
         </a-entity>
